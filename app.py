@@ -63,3 +63,18 @@ def delete_card(id: UUID) -> JSONResponse:
         },
         status_code=200,
     )
+
+
+# TODO: Implementar un sistema de autenticacion y autorizacion
+# @app.get("/token")
+# Implementar un modelo de usuario, username y password, tambien agregar roles
+# Implementar logica para cifrar el password (Las contraseñas no se guardan en texto plano)
+# Nota: La encriptacion es de dos sentidos, se encripta y se desencripta, el cifrado es de un solo sentido
+# Implementar logica para verificar el usuario y el password
+# Implementamos una funcion que te genere un JWT, y lo devuelva
+# Lo guardamos en el local storage del navegador
+# Luego hay que mandarlo en cada peticion al backend
+# Authorization: Bearer <token>
+
+# Implementar un middleware para verificar el token
+# Un middleware es una funcion que se ejecuta antes de cada peticion
