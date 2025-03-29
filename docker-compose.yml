@@ -1,0 +1,18 @@
+services:
+
+  cards_app:
+    tty: true
+    build:
+      context: .
+      args:
+        requirements: requirements/reqs.txt
+    container_name: cards_app
+    environment:
+      # use in code
+      - DEBUG=True
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app:delegated
+    ports:
+      - 8001:8001
+    command: uvicorn app:app --host 0.0.0.0 --port 8001 --reload
