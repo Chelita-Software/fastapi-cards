@@ -6,3 +6,10 @@ class CardUpdateRequest(BaseModel):
     descripcion: str | None = None
     img: str | None = None
     tags: list[str] | None = None
+
+
+class UserUpdateRequest(BaseModel):
+    """Request model for updating a user."""
+    email: str | None = None
+    name: str | None = None
+    role: str | None = None
